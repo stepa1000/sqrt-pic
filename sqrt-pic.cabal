@@ -1,0 +1,76 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           sqrt-pic
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/sqrt-pic#readme>
+homepage:       https://github.com/githubuser/sqrt-pic#readme
+bug-reports:    https://github.com/githubuser/sqrt-pic/issues
+author:         stepan
+maintainer:     stepa100023
+copyright:      2023 stepan
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/sqrt-pic
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_sqrt_pic
+  autogen-modules:
+      Paths_sqrt_pic
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , extra
+    , gloss
+    , random
+  default-language: Haskell2010
+
+executable sqrt-pic-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_sqrt_pic
+  autogen-modules:
+      Paths_sqrt_pic
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , extra
+    , gloss
+    , random
+    , sqrt-pic
+  default-language: Haskell2010
+
+test-suite sqrt-pic-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_sqrt_pic
+  autogen-modules:
+      Paths_sqrt_pic
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , extra
+    , gloss
+    , random
+    , sqrt-pic
+  default-language: Haskell2010
